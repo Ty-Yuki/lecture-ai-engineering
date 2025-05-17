@@ -39,3 +39,9 @@ jobs:
     - name: Run model tests
       run: |
         pytest day5/演習3/tests/test_model.py -v
+
+    - name: Run time tests
+      run: |
+        SECONDS=0
+        pytest day5/演習3/tests/test_model.py -v
+        echo "Execution time: ${SECONDS} seconds"
